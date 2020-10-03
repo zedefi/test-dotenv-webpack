@@ -1,0 +1,66 @@
+{
+    "env": {
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["autofix", "@typescript-eslint", "prettier", "@typescript-eslint"],
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"],
+    "rules": {
+        "prettier/prettier": "error",
+        "autofix/no-debugger": "error",
+        "no-undef": "error",
+        "no-var-requires": 0,
+        "lines-between-class-members": "error",
+        "newline-before-return": "error",
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "try"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "if"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "for"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "function"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "switch"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/explicit-function-return-type": [
+            "off",
+            {
+                "allowExpressions": true,
+                "allowTypedFunctionExpressions": true,
+                "allowHigherOrderFunctions": true
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                "variables": true,
+                "functions": false,
+                "classes": true
+            }
+        ]
+    }
+}
