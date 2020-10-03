@@ -26,9 +26,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin({
-      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX: 'development'
-    }),
+    // new webpack.EnvironmentPlugin({
+    //   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX: 'development'
+    // }),
     new Dotenv({
     })
   ]
